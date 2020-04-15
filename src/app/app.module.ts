@@ -13,6 +13,7 @@ import { SearchFormComponent } from './search-form/search-form.component';
 import { FormsModule } from '@angular/forms';
 import { UserService } from './user.service';
 import { RepoComponent } from './repo/repo.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 
 
@@ -23,7 +24,8 @@ import { RepoComponent } from './repo/repo.component';
     DateCountPipe,
     HighlightDirective,
     SearchFormComponent,
-    RepoComponent
+    RepoComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
