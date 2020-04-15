@@ -18,6 +18,15 @@ export class ProfileComponent implements OnInit {
   repo: Repo[];
   myRepos: Repo[];
 
+  @Output()
+  searchUser: EventEmitter<string> = new EventEmitter<string>()
+
+  submitUser() {
+    this.searchUser.emit(this.newUser.name);
+    this.newUser = new User("", "","", "", "", "", "","")
+
+  }
+
     newUser = new User ("","","","","","","","");
     getProfileInfo(username:string){
       this.userService.userInfo(username);
