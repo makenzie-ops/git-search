@@ -11,6 +11,9 @@ import { DateCountPipe } from './date-count.pipe';
 import { HighlightDirective } from './highlight.directive';
 import { SearchFormComponent } from './search-form/search-form.component';
 import { FormsModule } from '@angular/forms';
+import { UserService } from './user.service';
+import { RepoComponent } from './repo/repo.component';
+
 
 
 @NgModule({
@@ -19,7 +22,8 @@ import { FormsModule } from '@angular/forms';
     ProfileComponent,
     DateCountPipe,
     HighlightDirective,
-    SearchFormComponent
+    SearchFormComponent,
+    RepoComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +36,7 @@ import { FormsModule } from '@angular/forms';
     
 
   ],
-  providers: [],
+  providers: [UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

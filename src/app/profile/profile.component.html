@@ -1,57 +1,70 @@
-<app-search-form (searchUser)="searchUserName($event)"></app-search-form>
-<ng-progress></ng-progress>
-<div class="row">
-    <div class="col-md-6">
-        <div class="card">
-            <div class="col-md-16">
-            <div class="card-header">
-                <img class="profile-pic" src="{{ user.avatar_url }}" alt="" />
-                
-              <h2 appHighlight> Name : {{user.name}} </h2>
-           
-           
-            <!-- <h4><a href="{{user.repos_url}}"><button type="submit" class="btn btn-primary">Github profile</button> </a> </h4> -->
-            </div>
-            <div class="card-body">
-                
-               Bio: {{user.bio}} <br>
-            <br>
-                Location: {{user.location}} <br>
+<div class="container-fluid body">
+    <ng-progress></ng-progress>
+    <br>
+    <h3 class="text-center" style="color: beige;"> welcome to Github Search</h3>
+    <p class="text-center" style="color: beige;">Search the repository or username you would like to see</p>
+    <app-search-form (searchUser)="getProfileInfo($event)"></app-search-form>
+    <br>
+    <ng-progress></ng-progress>
+    <div class="row">
+        <div class="col-md-6 ">
+            <div class="card">
+               
+                <div class="card-header">
+                    <img class="profile-pic" src="{{ user.avatar_url }}" alt="" />
+                    
+                  <h2 appHighlight> Name : {{user.name}} </h2>
+               
+               
+                <!-- <h4><a href="{{user.repos_url}}"><button type="submit" class="btn btn-primary">Github profile</button> </a> </h4> -->
+                </div>
+                <div class="card-body">
+                    
+                   Bio: {{user.bio}} <br>
                 <br>
-                Followers: {{user.followers}} <br>
-                <br>
-                Following: {{user.following}}
+                    Location: {{user.location}} <br>
+                    <br>
+                    Followers: {{user.followers}} <br>
+                    <br>
+                    Following: {{user.following}}
+                </div>
+                
+                
+    
+                </div>
+        </div>
+    </div>
+    <div class="row"> 
+        <div class="col-md-6">
+            <div class="col-md-4"   *ngFor = "let myRepo of repo">
+                <div class=" row repos">
+                
+                    <div class="row" >
+                        <div class="col-md-12">
+                        <div class="repos-header">
+                            <h1>{{myRepo.name}} </h1>
+                        </div>
+                        <div class="repos-text">
+                            {{myRepo.description}}
+                            <br>
+                            <br>
+                            Language: <span>{{myRepo.language}}</span>
+                            <br> <br>
+                            Created :<span> {{myRepo.created_at | dateCount}} </span>
+                            <br> <br>
+                            <h4><a href="{{myRepo.html_url}}"><button type="submit" class="btn btn-primary">See More</button> </a> </h4>
+                     </div>
+                       
+                     
+                     </div>
+                </div>
             </div>
             </div>
             
-
-            </div>
-    </div>
-
-    <div class="col-md-16">
-    <div class="col-md-4"   *ngFor = "let myRepo of repo">
-        <div class="repos">
-        
-            <div class="col-md-12" >
-                <div class="col-md-12">
-                <div class="repos-header">
-                    <h1>{{myRepo.name}} </h1>
-                </div>
-                <div class="repos-text">
-                    {{myRepo.description}}
-                    <br>
-                    <br>
-                    Language: <span>{{myRepo.language}}</span>
-                    <br> <br>
-                    Created :<span> {{myRepo.created_at | dateCount}} </span>
-                    <br> <br>
-                    <h4><a href="{{myRepo.html_url}}"><button type="submit" class="btn btn-primary">See More</button> </a> </h4>
-             </div>
-               
-             
-             </div>
         </div>
-    </div>
-    </div>
     
-</div>
+    
+    </div>
+       
+
+

@@ -1,0 +1,31 @@
+<div class="jumbotron">
+    <h1 class="display-4 text-center">Search any repository</h1>
+    <hr class="my-4">
+
+  </div>
+  <app-search-form (searchUser)="getProfileInfo($event)"></app-search-form>
+  <div class="row">
+    <div class="col-md-4" *ngFor="let myRepo of myRepos">
+        <div class="col-md-4"> 
+        <div class="card">
+            <div class="card-header">
+               <h1>{{myRepo.name}} </h1>
+                 
+            </div>
+            <div class="card-body">
+                {{myRepo.description}}
+                <br>
+                <br>
+               Language: <span>{{myRepo.language}}</span>
+               <br> <br>
+               Created :<span>  {{myRepo.created_at | dateCount}} </span>
+               <br> <br>
+               <h4><a href="{{myRepo.html_url}}"><button type="submit" class="btn btn-primary">See More</button> </a> </h4>
+                
+            </div>
+        </div>
+        </div>
+
+    </div>
+</div>
+
