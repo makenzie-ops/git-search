@@ -1,0 +1,40 @@
+.new{
+    background-color: rgb(216, 238, 238);
+}
+.jumbotron{
+    background-color: black;
+    color: blanchedalmond;
+}
+.card{
+    width: 380px;
+   height: 350px;
+   margin-top: 30px;
+   margin-left: 20px;
+   font-size: 18px;
+    }
+h1{
+   font-size: 28px;
+   font-weight: bolder;
+   text-transform: capitalize;
+}
+
+.btn{
+   font-size: 18px;
+   border-radius: 15px;
+}
+.jumbotron{
+   height: 200px;
+   text-align: center;
+   
+   
+}
+h3{
+   font-size: 32px;
+   font-weight: bolder;
+   margin-top: 30px;
+
+}
+span{
+   font-size: 16px;
+   color: blue;
+}

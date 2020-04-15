@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
-import {ProfileComponent} from './profile/profile.component';
-import{RepoComponent} from './repo/repo.component'
-import {NotFoundComponent} from './not-found/not-found.component'
-import { from } from 'rxjs';
+import {ProfileComponent} from '../profile/profile.component';
+import{RepoComponent} from '../repo/repo.component'
+import {NotFoundComponent} from '../not-found/not-found.component'
+
 
 const routes: Routes = [
   {path: 'user', component:ProfileComponent},
@@ -12,9 +13,10 @@ const routes: Routes = [
 
   { path:'**', component:NotFoundComponent},
 ];
-
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  declarations: [],
+  imports: [
+    CommonModule
+  ]
 })
-export class AppRoutingModule { }
+export class RoutingModule { }

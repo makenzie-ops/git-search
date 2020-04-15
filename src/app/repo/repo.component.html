@@ -1,9 +1,10 @@
-<div class="jumbotron">
+<div class="jumbotron container-fluid">
     <h1 class="display-4 text-center">Search any repository</h1>
     <hr class="my-4">
 
   </div>
-  <app-search-form (searchUser)="getProfileInfo($event)"></app-search-form>
+  <div class="new">
+    <app-search-form (searchUser)="getProfileInfo($event)"></app-search-form>
   <div class="row">
     <div class="col-md-4" *ngFor="let myRepo of myRepos">
         <div class="col-md-4"> 
@@ -29,3 +30,6 @@
     </div>
 </div>
 
+
+  </div>
+  

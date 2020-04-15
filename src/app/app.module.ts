@@ -15,6 +15,7 @@ import { UserService } from './user.service';
 import { RepoComponent } from './repo/repo.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import {RoutingModule} from './routing/routing.module'
 
 
 
@@ -34,6 +35,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+    RoutingModule,
+
 
     NgProgressModule.forRoot(),
     NgProgressHttpClientModule

@@ -3,7 +3,7 @@
     <br>
     <h3 class="text-center" style="color: beige;"> welcome to Github Search</h3>
     <p class="text-center" style="color: beige;">Search the repository or username you would like to see</p>
-    <app-search-form (searchUser)="getProfileInfo($event)"></app-search-form>
+    <app-search-form (searchUser)="getProfileInfo($event)" ></app-search-form>
     <br>
     <ng-progress></ng-progress>
     <div class="row">
@@ -35,12 +35,14 @@
         </div>
     </div>
     <div class="row"> 
-        <div class="col-md-6">
-            <div class="col-md-4"   *ngFor = "let myRepo of repo">
-                <div class=" row repos">
+        <div class="col-md-6"   *ngFor = "let myRepo of repo">
+
+        <div class="col-md-4">
+
+                <div class="  repos">
                 
                     <div class="row" >
-                        <div class="col-md-12">
+                        <div class="col-md-6">
                         <div class="repos-header">
                             <h1>{{myRepo.name}} </h1>
                         </div>
