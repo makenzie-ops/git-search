@@ -12,7 +12,7 @@ export class UserService {
   users: User;
 
   constructor(private http:HttpClient) {
-    this.user = new User("","","","","","","","")
+    this.users = new User("","","","","","","","")
 
    }
   
