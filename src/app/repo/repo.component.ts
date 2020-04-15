@@ -11,7 +11,7 @@ import {Repo} from '../repo';
 export class RepoComponent implements OnInit {
   myRepos: Repo[]
   constructor( private repoService: RepoService) { }
-  searchRepo(username){
+  getProfileInfo(username){
     this.repoService.githubRepo(username).subscribe(data => {
       this.myRepos = data
 
